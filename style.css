@@ -13,6 +13,10 @@ h1{
 .choice{
     height: 175px;
     width: 175px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 img{
     height: 165px;
@@ -26,4 +30,29 @@ img{
     align-items: center;
     gap: 3rem;
     margin-top: 4rem;
+}
+.choice:hover{
+    opacity: 150%;
+    cursor:pointer;
+    background-color: rgb(30, 3, 49);
+}
+.score-borad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+#user,#comp{
+    font-size: 4rem;
+}
+#msg{
+    background-color: rgb(30, 3, 49);
+    color: aliceblue;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
 }
