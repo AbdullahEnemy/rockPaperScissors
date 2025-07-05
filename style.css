@@ -56,3 +56,12 @@ img{
     padding: 1rem;
     border-radius: 1rem;
 }
+#reset{
+    background-color: red;
+    color: aliceblue;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 1rem;
+}
