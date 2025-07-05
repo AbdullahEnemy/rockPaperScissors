@@ -1,7 +1,10 @@
 let userScore=0;
 let compScore=0;
+    let userS=document.getElementById("user");
+    let compS=document.getElementById("comp");
 const choices=document.querySelectorAll(".choice");
 const msg=document.getElementById("msg");
+const reset=document.getElementById("reset");
 const genComputerChoice=()=>{
     const option=["rock","paper","scissors"];
     const randIdx=Math.floor(Math.random()*3);
@@ -65,8 +68,6 @@ const fight=(userChoice,compChoice)=>
     
 }
 const updateScore=()=>{
-    let userS=document.getElementById("user");
-    let compS=document.getElementById("comp");
     userS.innerText=userScore;
     compS.innerText=compScore;
 }
@@ -83,3 +84,15 @@ choices.forEach((choice)=>{
         playGame(userChoice);
     })
 })
+const ressetall=()=>{
+
+    userS.innerText=0;
+    compS.innerText=0;
+    userScore=0;
+    compScore=0;
+    msg.innerText="Play Your Move";
+    msg.style.backgroundColor="rgb(30, 3, 49)"
+
+
+}
+reset.addEventListener("click",ressetall);
