@@ -1,21 +1,28 @@
 let userScore=0;
 let compScore=0;
 const choices=document.querySelectorAll(".choice");
+const msg=document.getElementById("msg");
 const genComputerChoice=()=>{
     const option=["rock","paper","scissors"];
     const randIdx=Math.floor(Math.random()*3);
     return option[randIdx];
 }
-const drawGame=()=>{console.log("game was draw")};
+const drawGame=()=>{msg.innerText="Game Draw";
+    msg.style.backgroundColor="rgb(30, 3, 49)";
+};
 const showWiner=(userWin)=>
 {
     if(userWin)
     {
-        userScore++;
-        
+        userScore++;  
+        msg.innerText="You Win";
+        msg.style.backgroundColor="green";
+
     }
     else{
         compScore++;
+        msg.innerText="You Lose";
+        msg.style.backgroundColor="red";
     }
 }
 const fight=(userChoice,compChoice)=>
@@ -24,6 +31,8 @@ const fight=(userChoice,compChoice)=>
     if(userChoice===compChoice)
     {
         drawGame();
+        return;
+
     }
     else if(userChoice==="paper")
     {
